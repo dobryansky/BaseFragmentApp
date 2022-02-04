@@ -16,10 +16,6 @@ class ListFragment : Fragment() {
     private var _binding: ListFragmentBinding? = null
     private val binding get() = _binding!!
 
-    companion object {
-        fun newInstance() = ListFragment()
-    }
-
     private lateinit var viewModel: ListViewModel
 
     override fun onCreateView(
@@ -43,6 +39,10 @@ class ListFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        fun newInstance() = ListFragment()
     }
 
 }
